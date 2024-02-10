@@ -3,22 +3,30 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class DotCreator {
+    public static boolean threadRunning = false;
     public static boolean isRunning = false;
     public static int dotsLimit = 1000;
     static ArrayList<Ellipse2D> dots = new ArrayList<>();
 
     DotCreator(){
-        (new DotCreator.DotThread()).start();
         dots.add(new Ellipse2D.Float((float) 345, (float) 45,10,10));
         dots.add(new Ellipse2D.Float(95, 545,10,10));
         dots.add(new Ellipse2D.Float(595,545,10,10));
+
+        System.out.println(DotThread.currentThread().isAlive());
+        if(!threadRunning){
+            (new DotCreator.DotThread()).start();
+        }
+
+
 //        (new DotCreator.DotThread()).start();
     }
 
     static class DotThread extends Thread{
         @Override
         public void run(){
-            while(!dots.isEmpty()) {
+            threadRunning = true;
+            while(true) {
                 while(isRunning && dots.size()<dotsLimit+3) {
                     Random rand = new Random();
                     int corner = rand.nextInt(3);

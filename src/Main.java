@@ -40,8 +40,8 @@ public class Main extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 DotCreator.isRunning = false;
                 DotCreator.dots.clear();
-                new DotCreator();
                 DotCreator.dotsLimit = (int)comboBox.getSelectedItem();
+                new DotCreator();
             }
         });
 
