@@ -43,7 +43,9 @@ The Sierpinski Triangle is a fascinating fractal pattern that emerges from simpl
 
 Here's a screenshot of the Sierpinski Triangle visualizer in action:
 
-![Sierpinski Triangle](images/sierpinski_triangle.png)
+<img width=49% alt="sierpinski1" src="https://github.com/Peczyn/STV/assets/142744067/d9916e2a-6682-42fe-a0a8-43cc48c3478a">
+<img width=49% alt="sierpinski2" src="https://github.com/Peczyn/STV/assets/142744067/3dde310b-0795-43ea-bf84-6f95f68ff1d8">
+
 
 ## Contributing
 
